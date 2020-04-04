@@ -1,0 +1,17 @@
+{
+  "board1" : { 
+    "name": "food",
+    "description": "Quick meals to make",
+    "uid": 1200
+  },
+  "board2" : { 
+    "name": "cats",
+    "description": "cute cats",
+    "uid": 1400
+  },
+  "board3" : { 
+    "name": "dogs",
+    "description": "cute dogs",
+    "uid": 1600
+  }
+}

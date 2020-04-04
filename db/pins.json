@@ -1,0 +1,14 @@
+{
+  "pin1" : { 
+    "boardID": "board1",
+    "imageUrl": "https://www.thechunkychef.com/wp-content/uploads/2019/09/One-Pot-Spaghetti-feat.jpg"
+  },
+  "pin2" : { 
+    "boardID": "board2",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRukKrkHPD2FRboXMJdb-6XRMgx4UZrOnox98mHR_0-pdSqF6CT&usqp=CAU"
+  },
+  "pin3" : { 
+    "boardID": "board3",
+    "imageUrl": ""
+  }
+}
