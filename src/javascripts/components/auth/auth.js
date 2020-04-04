@@ -7,10 +7,11 @@ const signMeIn = () => {
   firebase.auth().signInWithPopup(provider);
 };
 
-const loginButton = () => {
-  const domString = '<button id="google-auth" class="btn btn-danger">Google Login</button>';
+const loginPage = () => {
+  let domString = '<h1>PINTEREST</h1>';
+  domString += '<button id="google-auth" class="btn btn-danger">Google Login</button>';
   utils.printToDom('auth', domString);
   $('#google-auth').click(signMeIn);
 };
 
-export default { loginButton };
+export default { loginPage };
