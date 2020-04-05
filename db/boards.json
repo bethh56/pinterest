@@ -1,0 +1,17 @@
+{
+  "board1" : { 
+    "name": "food",
+    "description": "Quick meals to make",
+    "UserUid": "UU6F6zJjbVQwBn965osG78g1cHR2"
+  },
+  "board2" : { 
+    "name": "cats",
+    "description": "cute cats",
+    "UserUid": "UU6F6zJjbVQwBn965osG78g1cHR2"
+  },
+  "board3" : { 
+    "name": "dogs",
+    "description": "cute dogs",
+    "UserUid": "UU6F6zJjbVQwBn965osG78g1cHR2"
+  }
+}
