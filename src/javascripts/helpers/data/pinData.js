@@ -3,6 +3,18 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getPins = () => axios.get(`${baseUrl}/pins.json`);
+const getPins = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/pins.json`)
+    .then((response) => {
+      const allPins = response.data;
+      const pins = [];
+      Object.keys(allPins).forEach((pinId) => {
+        allPins[pinId].id = pinId;
+        pins.push(allPins[pinId]);
+      });
+      resolve(pins);
+    })
+    .catch((err) => reject(err));
+});
 
 export default { getPins };

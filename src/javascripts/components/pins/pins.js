@@ -3,7 +3,7 @@ import pinData from '../../helpers/data/pinData';
 
 const buildPins = () => {
   pinData.getPins()
-    .then((resolve) => console.error('get pins is working!', resolve))
+    .then((pinInfo) => console.error('get pins is working!', pinInfo))
     .catch((err) => console.error('get pins not working!', err));
 };
 
