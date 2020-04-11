@@ -8,7 +8,7 @@ const signMeIn = () => {
 };
 
 const loginPage = () => {
-  let domString = '<h1>PINTEREST</h1>';
+  let domString = '<h1 class="text-center p-3">PINTEREST</h1>';
   domString += '<button id="google-auth" class="btn btn-danger">Google Login</button>';
   utils.printToDom('auth', domString);
   $('#google-auth').click(signMeIn);
