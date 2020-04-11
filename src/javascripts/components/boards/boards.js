@@ -3,7 +3,7 @@ import pinData from '../../helpers/data/pinData';
 import utils from '../../helpers/utils';
 
 const singlePinView = () => {
-  pinData.getPins()
+  pinData.getPins();
 };
 
 const buildBoards = () => {
