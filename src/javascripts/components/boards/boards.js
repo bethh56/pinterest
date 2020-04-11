@@ -1,9 +1,10 @@
 import boardData from '../../helpers/data/boardData';
+import pinData from '../../helpers/data/pinData';
 import utils from '../../helpers/utils';
 
-// const singlePinView = () => {
-
-// };
+const singlePinView = () => {
+  pinData.getPins()
+};
 
 const buildBoards = () => {
   boardData.getBoards()
@@ -24,7 +25,7 @@ const buildBoards = () => {
       utils.printToDom('boardDisplay', domString);
     })
     .catch((err) => console.error('get boards broke', err));
-  // $('#viewPins').click(singlePinView);
+  $('#viewPins').click(singlePinView);
 };
 
 export default { buildBoards };
