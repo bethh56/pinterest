@@ -1,4 +1,5 @@
 import pinData from '../../helpers/data/pinData';
+// import boards from '../boards/boards';
 import utils from '../../helpers/utils';
 
 const buildPins = () => {
