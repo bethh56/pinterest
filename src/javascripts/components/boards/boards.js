@@ -1,8 +1,12 @@
 import boardData from '../../helpers/data/boardData';
 import utils from '../../helpers/utils';
 
-const removeBoard = () => {
-  console.error('button working');
+const removeBoard = (e) => {
+  const boardId = e.target.closest('.card').id;
+  boardData.deleteBoard(boardId)
+  // eslint-disable-next-line no-use-before-define
+    .then(() => buildBoards())
+    .catch((err) => console.error('could not delete board', err));
 };
 
 const viewBoardsPins = () => {
