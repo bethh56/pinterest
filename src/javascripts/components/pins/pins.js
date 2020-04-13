@@ -7,6 +7,7 @@ const buildPins = () => {
     .then((pinInfo) => {
       let domString = '';
       pinInfo.forEach((pin) => {
+        console.error('pin data', pin.boardID);
         domString += '<div class="card col-3">';
         domString += `<img id="pinImage"class="card-img-top mx-auto p-3" src="${pin.imageUrl}" alt="Card image cap">`;
         domString += '<div class="d-flex justify-content-around pb-3">';
