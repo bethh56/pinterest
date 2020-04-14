@@ -27,7 +27,7 @@ const buildBoards = () => {
         domString += '</div>';
       });
       utils.printToDom('boardDisplay', domString);
-      $('body').on('click', '.viewPins', pins.buildPins);
+      $('.viewPins').click(pins.buildPins);
       $('.deleteBoard').click(removeBoard);
     })
     .catch((err) => console.error('get boards broke', err));
