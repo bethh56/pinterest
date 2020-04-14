@@ -1,5 +1,6 @@
 import boardData from '../../helpers/data/boardData';
 import utils from '../../helpers/utils';
+import pins from '../pins/pins';
 
 const removeBoard = (e) => {
   const boardId = e.target.closest('.card').id;
@@ -9,16 +10,11 @@ const removeBoard = (e) => {
     .catch((err) => console.error('could not delete board', err));
 };
 
-const viewBoardsPins = () => {
-  console.error('view board button working');
-};
-
 const buildBoards = () => {
   boardData.getBoards()
     .then((boardInfo) => {
       let domString = '';
       boardInfo.forEach((board) => {
-        console.error('board data', board.id);
         domString += `<div class="card col-3" id="${board.id}">`;
         domString += '<div class="card-body">';
         domString += `<h5 class="card-title border-bottom text-center pb-2">${board.name}</h5>`;
@@ -31,7 +27,7 @@ const buildBoards = () => {
         domString += '</div>';
       });
       utils.printToDom('boardDisplay', domString);
-      $('.viewPins').click(viewBoardsPins);
+      $('body').on('click', '.viewPins', pins.buildPins);
       $('.deleteBoard').click(removeBoard);
     })
     .catch((err) => console.error('get boards broke', err));
