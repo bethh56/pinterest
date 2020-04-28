@@ -22,7 +22,7 @@
   <div id="boards" class="hide">
     <div class="text-center p-3">
       <h1 class="text-center">BOARDS</h1>
-      <button class="btn btn-danger m-2">ADD BOARD</button>
+      <button id="addBoardModalButton" class="btn btn-danger m-2">ADD BOARD</button>
     </div>
     <div id="boardDisplay" class="d-flex flex-row justify-content-around"></div>
   </div>
@@ -34,6 +34,28 @@
   </div>
     <div id="pinDisplay" class="d-flex flex-row justify-content-around"></div>
   </div>
+
+<!-- ADD BOARD MODAL -->
+<div class="modal" id="boardModal" data-target="#myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add a new Board</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="boardModalBody" class="modal-body">
+        <div id="modalBoardForm"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>  
+          <button type="submit" id="newBoardSubmit" class="newBoardSubmit btn btn-default">Submit New Board</button>
+          <button type="submit" id="editBoardSubmit" class="editBoardSubmit btn btn-default">Edit Board</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- ADD BOARD MODAL END -->
 
 </body>
 </html>
