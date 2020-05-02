@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import boards from '../../components/boards/boards';
+import boards from '../../components/boards/boardComponent';
 
 
 const authDiv = $('#auth');
@@ -20,6 +20,7 @@ const checkLoginStatus = () => {
       boardsDiv.addClass('hide');
       logoutButton.addClass('hide');
     }
+    boards.boardEvents();
   });
 };
 
